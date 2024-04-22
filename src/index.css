@@ -4,5 +4,5 @@
 
 body {
   @apply bg-background
-  flex justify-center items-center scroll-smooth;
+  flex justify-center items-center box-border overflow-x-hidden scroll-smooth;
 }

@@ -15,6 +15,9 @@ export default {
         90:"22rem",
         100: "26rem",
       },
+      fontSize:{
+        md:"16px"
+      }
     },
   },
   plugins: [],

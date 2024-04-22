@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Card from "../components/Card/Card";
+import Card from "../../components/Card/Card";
 import axios from "axios";
 import styles from "./index.module.css";
 
@@ -54,8 +54,8 @@ const Landing = () => {
   return (
     <div className={styles.mainContainer}>
       <div className={styles.cardContainer}>
-        {peoples.map((people, index) => (
-          <Card key={index} people={people} />
+        {peoples.map((people) => (
+          <Card key={people.id} people={people} />
         ))}
       </div>
     </div>

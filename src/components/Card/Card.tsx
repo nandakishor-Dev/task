@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { People } from "../../Landing/Landing";
+import { People } from "../../pages/Landing/Landing";
 import styles from "./index.module.css";
 
 interface CardProps {
