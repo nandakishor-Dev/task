@@ -1,5 +1,23 @@
 .main {
-  @apply p-4 mt-6 lg:mt-12 shadow-lg flex flex-col    bg-white rounded-3xl w-full lg:w-100;
+  @apply p-4 mt-6 lg:mt-12 shadow-lg flex flex-col cursor-pointer    bg-white rounded-3xl w-full lg:w-100;
+}
+.topSection{
+    @apply h-2/5 flex flex-col p-4
+}
+.topSection div{
+    @apply flex flex-1
+}
+.topSection > div:not(:first-child) span {
+    @apply flex-1
+}
+.topSection > div:nth-child(2) span {
+    @apply font-medium
+}
+.topSection > div:first-child > span:nth-child(2) {
+    @apply pl-1
+}
+.bottomSection{
+    @apply flex-1 gap-3 flex flex-col
 }
 .addressSection {
   @apply bg-background flex flex-col rounded-3xl h-3/5 p-4;
@@ -10,6 +28,9 @@
 .addressSection div {
   @apply flex flex-1;
 }
+.addressSection h1 {
+  @apply font-medium flex-1
+}
 .companySection {
   @apply flex flex-col bg-background rounded-3xl h-2/5 p-4;
 }
@@ -18,4 +39,7 @@
 }
 .companySection div {
   @apply flex flex-1;
+}
+.companySection h1 {
+  @apply font-medium flex-1 mb-2
 }
