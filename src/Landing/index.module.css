@@ -1,0 +1,6 @@
+.mainContainer {
+  @apply flex box-border flex-col min-h-screen  container  lg:px-10 w-screen mb-10 mt-6 px-4 lg:mt-2;
+}
+.cardContainer {
+  @apply flex box-border w-full flex-col lg:flex-row lg:flex-wrap items-center justify-between  gap-10 mt-4  p-0 lg:p-6;
+}

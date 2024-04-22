@@ -1,15 +1,13 @@
 import { FC } from "react";
 import { People } from "../../Landing/Landing";
+import styles from "./index.module.css";
 
 interface CardProps {
   people: People;
 }
 const Card: FC<CardProps> = ({ people }) => {
   return (
-    <div
-      key={people.id}
-      className=" p-4 mt-6 lg:mt-12 shadow-lg flex flex-col   bg-white rounded-3xl w-80 lg:w-100"
-    >
+    <div key={people.id} className={styles.main}>
       <div className="h-2/5 flex flex-col p-4">
         <div className="flex flex-1">
           <span className="">ID :</span>
@@ -37,43 +35,35 @@ const Card: FC<CardProps> = ({ people }) => {
         </div>
       </div>
       <div className="flex-1 gap-3 flex flex-col ">
-        <div className="bg-background flex flex-col rounded-3xl h-3/5 p-4 ">
+        <div className={styles.addressSection}>
           <h1 className="font-medium flex-1">Address</h1>
 
-          <div className="flex flex-1">
-            <span className="flex-1 ">Street :</span>{" "}
-            <span className="flex-1">{people.address.street}</span>
+          <div>
+            <span>Street :</span> <span>{people.address.street}</span>
           </div>
-          <div className="flex flex-1">
-            <span className="flex-1 ">Suite :</span>{" "}
-            <span className="flex-1">{people.address.suite}</span>
+          <div>
+            <span>Suite :</span> <span>{people.address.suite}</span>
           </div>
-          <div className="flex flex-1">
-            <span className="flex-1">City:</span>{" "}
-            <span className="flex-1">{people.address.zipcode}</span>
+          <div>
+            <span>City:</span> <span>{people.address.zipcode}</span>
           </div>
-          <div className="flex flex-1">
-            <span className="flex-1">Latitude:</span>{" "}
-            <span className="flex-1">{people.address.geo.lat}</span>
+          <div>
+            <span>Latitude:</span> <span>{people.address.geo.lat}</span>
           </div>
-          <div className="flex flex-1">
-            <span className="flex-1">Longtitude:</span>{" "}
-            <span className="flex-1">{people.address.geo.lat}</span>
+          <div>
+            <span>Longtitude:</span> <span>{people.address.geo.lng}</span>
           </div>
         </div>
-        <div className="flex flex-col bg-background rounded-3xl h-2/5 p-4">
+        <div className={styles.companySection}>
           <h1 className="font-medium flex-1 mb-2">Company</h1>
-          <div className="flex flex-1">
-            <span className="flex-1">Name:</span>{" "}
-            <span className="flex-1">{people.company.name}</span>
+          <div>
+            <span>Name:</span> <span>{people.company.name}</span>
           </div>
-          <div className="flex flex-1">
-            <span className="flex-1">catchPhrase:</span>{" "}
-            <span className="flex-1">{people.company.catchPhrase}</span>
+          <div>
+            <span>catchPhrase:</span> <span>{people.company.catchPhrase}</span>
           </div>
-          <div className="flex flex-1">
-            <span className="flex-1">bs:</span>{" "}
-            <span className="flex-1">{people.company.bs}</span>
+          <div>
+            <span>bs:</span> <span>{people.company.bs}</span>
           </div>
         </div>
       </div>

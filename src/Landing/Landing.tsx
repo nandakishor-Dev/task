@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Card from "../components/Card/Card";
 import axios from "axios";
+import styles from "./index.module.css";
 
 export interface People {
   id: number;
@@ -51,8 +52,8 @@ const Landing = () => {
   }, []);
 
   return (
-    <div className="flex box-border flex-col min-h-screen  container  lg:px-10">
-      <div className="flex box-border flex-col lg:flex-row lg:flex-wrap items-center justify-between  gap-10 mt-4  p-3 lg:p-6 ">
+    <div className={styles.mainContainer}>
+      <div className={styles.cardContainer}>
         {peoples.map((people, index) => (
           <Card key={index} people={people} />
         ))}

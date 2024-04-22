@@ -5,12 +5,14 @@ export default {
     extend: {
       colors: {
         background: "#efedf4",
+        cardColor:"#f5f5f4"
       },
       height: {
         130: "70dvh",
         135: "85dvh",
       },
       width: {
+        90:"22rem",
         100: "26rem",
       },
     },
